@@ -1,0 +1,112 @@
+/* ini format penulisan */
+/* 
+selector:
+tag
+class
+id
+tag dengan atribut khusus 
+*/
+
+/* beda id sama class */
+/* pemakaian id bersifat unik, misal di paragaf tapi tempat lain ada juga yg gitu, masing2 bakal beda kena cssnya */
+/* kalo style namanya sama, semua kena */
+/* lebih ke efek ke javascriptnya */
+
+h2
+{
+    color: red;
+    text-align: center;
+    /* mending pake em ato % aja */
+    font-size: 15em;
+    /* font-size: 20%; */
+    /* 1 em = 16px */
+
+    /* text-decoration: underline; */
+    /* text-decoration: overline; */
+    /* text-decoration: line-through; */
+
+    text-shadow: 20px 20px;
+
+    
+}
+
+#paragraph
+{
+    /* border-top-style: dotted; */
+    /* border-left-style: solid; */
+    /* border-style: solid; */
+    /* solid, dotted, dashed, ridged */
+    border-radius: 20%;
+    border-width: 5em;
+    color: blue;
+    /* margin */
+    /* ngasih jarak antar elemen */
+    margin: 2em;
+    /* padding */
+    /* ngatur jarak dalem container */
+    padding: 30em;
+    /* sering dipake */
+    /* dijadiin 1 block sendiri gitu */
+    /* display: block; */
+    /* margin top sama bot jadi gaada */
+    /* display: inline; */
+    /* campuran dari 2 itu */
+    /* display: inline-block; */
+    /* display: flex; */
+}
+
+
+.heading3
+{
+    color: green;
+}
+
+/* body */
+/* { */
+    /* background-color: yellowgreen; */
+    /* opacity: 0.3; */
+    /* background-image: url('pic1.jpg'); */
+    /* ini biar ga ngulang2 gambarnya */
+    /* background-repeat: no-repeat;  */
+    /* ini biar ngulangnya kesamping (sumbu x) */
+    /* background-repeat: repeat-x; */
+    /* ini biar ngulangnya kebawah (sumbu y) */
+    /* background-repeat: repeat-y; */
+/* } */
+
+/* kalo ini sesuai teksnya, jadi secukupnya */
+.text-inline
+{
+    display: inline;
+}
+
+/* kiri kanan atas bawah sama marginnya */
+.text-block
+{
+    display: block;
+}
+
+/* mirip kayak inline, tapi mengaturnya lebih mudah utk posisinya (buat css padding, marginnya kayaknya nanti lebih leluasa) */
+.text-inline-block
+{
+    display: inline-block;
+}
+
+.position
+{
+    /* ada 4 */
+    /* absolute, fixed, relative, sticky */
+    /* absolute lebih ke maksa harus disitu */
+    /* relative (sering)
+    sesuain posisinya sama divnya atau bagiannya itu sendiri 
+    lebih gampang editnya per margin dll*/
+    /* absolute (ini jarang dipake)
+    dia maksain kalo posisinya harus disitu */
+    /* fixed (sering)
+    biasa ada di navbar, jadi sia selalu ngikutin, selalu ada */
+    /* sticky (jarang)
+    gabungan dari relative sama fixed
+    kalo pas muncul biasa
+    trs discroll harusnya ilang
+    dia ikut */
+}
