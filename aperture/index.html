@@ -57,23 +57,15 @@
         <div class="container">
           <form action="#">
         
-            <label for="fname">First Name</label>
-            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+            <input type="text" id="name" name="name" placeholder="Name">
         
-            <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+            <input type="text" id="email" name="email" placeholder="Email">
+
+            <input type="text" id="phone" name="phone" placeholder="Phone Number">
+
+            <textarea id="subject" name="subject" placeholder="Message" style="height:150px"></textarea>
         
-            <label for="country">Country</label>
-            <select id="country" name="country">
-              <option value="australia">Australia</option>
-              <option value="canada">Canada</option>
-              <option value="usa">USA</option>
-            </select>
-        
-            <label for="subject">Subject</label>
-            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-        
-            <input type="submit" value="Submit">
+            <input type="submit" value="Submit" class="submit">
         
           </form>
         </div>
@@ -84,10 +76,14 @@
 </script>
 <footer>
   <p>Design and Manage by:</p>
+  <div class="foot-left">
   <img class="footer-logo" src="img/logo.png" alt="">
   <h4>Aperture Photos</h4>
+</div>
+<div class="foot-right">
   <p>Created by:</p>
   <img src="img/avesolution.png" alt="ave">
-  <p>© 2020 Aperture Photos, All rights reserved.</p>
+</div>
+<p class="copyright">© 2020 Aperture Photos, All rights reserved.</p>
 </footer>
 </html>
