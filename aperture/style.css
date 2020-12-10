@@ -208,8 +208,9 @@ input[type=text], select, textarea {
     box-sizing: border-box; /* Make sure that padding and width stays in place */
     margin-top: 6px; /* Add a top margin */
     margin-bottom: 16px; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-  }
+    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+    background-color: grey;
+}
   
   /* Style the submit button with a specific background color etc */
   input[type=submit] {
@@ -252,7 +253,7 @@ input[type=text], select, textarea {
     transform: translateX(15.5em);
 }
 
-  footer
+  .palsu
   {
     background-color: black;
     height: 223px;
@@ -263,29 +264,54 @@ input[type=text], select, textarea {
     color: white;
   }
 
-footer h1, h4, p
+.palsu h1, h4, p
 {
     color: white;
     font-size: 36px;
 }
 
+.palsu h4
+{
+    padding-top: 1em;
+    padding-left: 0.3em;
+    font-size: 230%;
+    font-weight: 600;
+    color:#F6C214;
+    align-items: center;
+}
+
+.judul
+{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-left: 8%;
+    padding-top: 12em;
+    font-size: 30%;
+    width: 50%;
+
+}
+
 .footer-logo
 {
-    width: 10%;
-    height: 10%;
+    width: 15%;
+    height: 15%;
 }
 
 .foot-left
 {
     float: left;
     display: flex;
+    margin: 0;
+    margin-left: 10em;
+    height: 100px;
 }
 
 .foot-right
 {
     float: right;
     margin: 0;
-    margin-left: 7em;
+    padding: 0;
 }
 
 .foot-right img
@@ -298,4 +324,10 @@ footer h1, h4, p
 {
     text-align: center;
     position: absolute;
+    color: white;
+    background-color: black;
+    background-attachment: fixed;
+    width: 100%;
+    /* height: 100%; */
+    background-size: cover;
 }
