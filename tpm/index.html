@@ -122,7 +122,141 @@
 
     <p id="world"></p>
 
-</body>
+    <!-- ini buat latihan js -->
+    <button id="btn1">Animate height</button>
+    <button id="btn2">Reset height</button>
 
+    <div
+      id="box"
+      style="background: #98bf21; height: 100px; width: 100px; margin: 6px"
+    ></div>
+
+    <button id="btn3">Hide</button>
+    <button id="btn4">Show</button>
+
+    <div
+      id="box2"
+      style="background: #98bf21; height: 100px; width: 100px; margin: 6px"
+    ></div>
+
+    <button id="btn5">Toggle</button>
+
+    <div>
+      id="box3"
+      style="background: #98bf21; height: 100px; width: 100px; margin: 6px"
+      id="box4"
+      style="background: #98bf21; height: 100px; width: 100px; margin: 6px"
+    ></div>
+
+        <p id="data"></p>
+
+        <img id="photo" src="" alt="profile pic">
+        <h3 id="nama">Nama</h3>
+        <h3 id="location">Location</h3>
+
+<!-- belajar AJAX -->
+
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 <script src="app.js"></script>
+<script>
+    // $("").event();
+    // ini diaction pas diapain baru ngapain kerjanya
+    //click, mouseenter, dblclick, mouseleave
+    // $("").mouseenter();
+    //$ itu buat manggil jquery biar kerja
+    //("") itu selector, kayak class, id gitugitu
+    //action ada 3 itu diatas, mousenter, mouseleave, click, dblclick
+    $("#btn1").click(
+        // ini funsgi yg mau dijalanin
+        function()
+        {
+            $("#box").animate({height:"300px"});
+        }
+    );
+    $("#btn2").click(
+        // ini funsgi yg mau dijalanin
+        function()
+        {
+            $("#box").animate({height:"100px"});
+        }
+    );
+    // jquery juga bisa hide, show
+
+   
+
+    $("#btn3").click(
+        // ini funsgi yg mau dijalanin
+        function()
+        {
+            // bisa dikasih waktu buat transisi ngilangnya
+            $("#box2").hide(1000);
+        }
+    );
+    $("#btn4").click(
+        // ini funsgi yg mau dijalanin
+        function()
+        {
+            $("#box2").show(1000);
+        }
+    );
+    $("#btn5").click(
+        // ini funsgi yg mau dijalanin
+        function()
+        {
+            // $("#box3").toggle(1000);
+            // kalo mau 2 item kena
+            // tulis aja disini sekalian
+            // begini juga bisa
+            $("#box3, #box4").toggle(1000);
+        }
+    );
+
+    // belajar AJAX
+    //asyncrhonous javascript and xml
+    //ajax berjalan secara asinkronus, jadi ga berbarengan
+    //API
+    //PENYAMBUNG KE BACKEND SIMPLENYA
+    //api jadi kita betak data itu, jadi bisa dipake lagi sesuka kita
+
+        // ajax bisa pake
+        // javascript, jquery, fetch api, axios
+        // ini di jquery
+    
+        //JSON
+        // JavaScript Object Notation
+        // $(document).ready(function()
+        // {
+        //     // kalo webnya udah ke load, js jalan
+        // });
+
+        // $.get(urlAPInya, functionYangDipake)
+        // {
+
+        // };
+        $(document).ready(function()
+        {
+            $("#data").load("https://api.github.com/users/youhane");
+        });
+
+        $.get("https://api.github.com/users/youhane", function(data, status)
+        {
+            // if(status === 404)
+            // {
+            //     // fungsi
+            // }
+            // ambil data dari API
+            $("#photo").attr("src", data.avatar_url);
+            $("#nama").text(data.name);
+            $("#location").text(data.location);            
+        });
+
+
+        $/post("https://api.github.com/users/youhane", data, function(data, status)
+        {
+            // proses kirim data
+        });
+</script>
+
+
 </html>
