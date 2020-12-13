@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,700;1,500;1,700&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -30,7 +34,7 @@ body
 
 .home
 {
-    background-image: url(img/home.jpg);
+    background-image: url(img/home2.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
     width: 100%;
@@ -40,7 +44,7 @@ body
 
 .about
 {
-    background-image: url(img/about.jpg);
+    background-image: url(img/about2.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
     height: 100%;
@@ -63,7 +67,7 @@ body
     height: 100%;
     max-width: 100%;
     max-height: 100%;
-    background-image: url(img/contactUs.jpg);
+    background-image: url(img/contactUs2.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -405,4 +409,63 @@ input[type=text], select, textarea {
 {
     padding-top: 1em;
     margin-top: 1em;
+}
+
+@media (max-width: 768px) {
+   .palsu
+   {
+       flex-direction: column;
+       height: 100%;
+       margin: 0;
+       padding: 0;
+   }
+   .foot-left, .foot-right
+   {
+       margin: 0%;
+       margin-right: 60%;
+   }
+   .foot-left
+   {
+       margin-left: 15%;
+   }
+
+   .form-contact
+   {
+       margin-right: 93em;
+       padding-top: 1.5em;
+       height: 30em;
+       width: 22%;
+   }
+
+   .other-title
+   {
+       margin-right: 22em;
+   }
+
+   .form-contact textarea
+    {
+        margin-left: 1em;
+    }
+    .submit
+    {
+        margin: 0;
+        padding: 0;
+        margin-right: 300%;
+        padding-right: 3000%;
+    }
+    .btn-submit
+    {
+        width: 50%;
+        margin-right: 30em;
+    }
+
+    .gallery
+    {
+        flex-direction: column;
+        padding-right: 20em;
+    }
+    .our-work
+    {
+
+    }
 }
