@@ -433,11 +433,13 @@ input[type=text], select, textarea {
    .foot-left, .foot-right
    {
        margin: 0%;
-       margin-right: 60%;
+       margin-right: 25em;
    }
    .foot-left
    {
        margin-left: 15%;
+       margin-bottom: 1.5em;
+       margin-top: 1.5em;
    }
 
    .form-contact
@@ -463,11 +465,6 @@ input[type=text], select, textarea {
         padding: 0;
         margin-right: 300%;
         padding-right: 3000%;
-    }
-    .btn-submit
-    {
-        width: 50%;
-        margin-right: 30em;
     }
     .about p
     {
@@ -518,5 +515,6 @@ input[type=text], select, textarea {
     .form-contact
     {
         margin-left: 24em;
+        margin-top: 3em;
     }
 }
