@@ -411,7 +411,18 @@ input[type=text], select, textarea {
     margin-top: 1em;
 }
 
+.mobile-container
+{
+    display: none;
+}
+
 @media (max-width: 768px) {
+
+    body{
+        width: 100%;
+        color: black;
+    }
+    
    .palsu
    {
        flex-direction: column;
@@ -458,14 +469,54 @@ input[type=text], select, textarea {
         width: 50%;
         margin-right: 30em;
     }
+    .about p
+    {
+    text-align: center;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 44px;
+    position: absolute;
+    width: 25%;
+    height: 75%;
+    left: 13%;
+    margin: 0;
+    margin-top: 3em;
+    }
+    .about img
+    {
+        margin-left: 23em;
+        padding: 3em;
+    }
+    .pc-container
+    {
+        display: none;
+    }
 
+    .mobile-container 
+    {
+        display: flex;
+    }
     .gallery
     {
+        display: flex;
         flex-direction: column;
-        padding-right: 20em;
+        width: 30em;
+        margin-bottom: 0;
     }
     .our-work
     {
+        height: 100%;
+        width: 100%;
+    }
+    .pic-bot
+    {
+        padding-bottom: 1em;
+        margin-bottom: 7em;
+        width: 10px;
+    }
 
+    .form-contact
+    {
+        margin-left: 24em;
     }
 }
