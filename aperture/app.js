@@ -1,21 +1,20 @@
-function validateForm() 
-{
-    var x = document.forms["contact-form"]["name"].value;
-    if (x == "") 
-    {
-      alert("Name must be filled out");
-      return false;
-    }
-}
+// Get the container element
+var btnContainer = document.getElementById("pc-container");
 
-function validateemail()  
-{  
-var x=document.contact-form.email.value;  
-var atposition=x.indexOf("@");  
-var dotposition=x.lastIndexOf(".");  
-if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length)
-{  
-  alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);  
-  return false;  
-}  
-}  
+// Get all buttons with class="btn" inside the container
+var btns = btnContainer.getElementsByClassName("nav-link");
+
+// Loop through the buttons and add the active class to the current/clicked button
+for (var i = 0; i < btns.length; i++) {
+   btns[i].addEventListener("click", function() {
+     var current = document.getElementsByClassName("active");
+ 
+     // If there's no active class
+     if (current.length > 0) {
+       current[0].className = current[0].className.replace(" active", "");
+     }
+ 
+     // Add the active class to the current/clicked button
+     this.className += " active";
+   });
+ }

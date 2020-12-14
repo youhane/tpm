@@ -16,11 +16,12 @@ body
     overflow-x: hidden;
     background-color: white;
     font-family: 'Montserrat', sans-serif;
+    min-width: 2080px;
 }
 
-body
+footer
 {
-    min-width: 2080px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .nav-logo
@@ -126,13 +127,11 @@ h3, h4, h5, h6, p
 .about
 {
     height: 1080px;
-    width: 1920px;
 }
 
 .other-title
 {
     text-align: center;
-    /* margin-right: 3em; */
     padding: 0;
     padding-top: 1em;
     font-size: 4em;
@@ -152,7 +151,6 @@ h3, h4, h5, h6, p
 .our-work
 {
     height: 1080px;
-    width: 1920px;
     left: -4px;
     top: 1080px;
     border-radius: 0px;
@@ -179,6 +177,7 @@ h3, h4, h5, h6, p
     padding: 0;
     padding-left: 15em;
     margin-top: 6em;
+    margin-left: 30em;
 }
 
 .column 
@@ -192,14 +191,13 @@ h3, h4, h5, h6, p
 {
     margin: 0;
     height: 1080px;
-    width: 1920px;
     left: 0px;
     top: 3240px;
     border-radius: 0px;
 }
 
-/* Style inputs with type="text", select elements and textareas */
-input[type=text], select, textarea {
+input[type=text], select, textarea 
+{
     width: 93%; /* Full width */
     padding: 12px; /* Some padding */ 
     border: 2px solid #000000 25%; 
@@ -213,7 +211,8 @@ input[type=text], select, textarea {
      
 }
 
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+::placeholder 
+{ /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #000000 50%;;
     font-size: larger;
   }
@@ -223,8 +222,7 @@ input[type=text], select, textarea {
 {
     margin-left: 1em;
 }
-  
-  /* Style the submit button with a specific background color etc */
+
   input[type=submit] 
   {
     background-color: #F6C214;
@@ -250,27 +248,27 @@ input[type=text], select, textarea {
     padding: 20px;
     height: 30em;
     margin: auto;
-    width: 40em;
+    width: 35em;
     padding: 10px;
+    margin-top: 3em;
   }
 
 .submit
 {
     margin: 0;
-    -ms-transform: translateX(15.5em);
-    transform: translateX(15.5em);
-    padding-top: 1em;
+    -ms-transform: translateX(12em);
+    transform: translateX(12em);
+    padding-top: .5em;
 }
 
   .palsu
   {
     background-color: black;
-    height: 223px;
-    width: 1920px;
-    left: 0px;
-    top: 4097px;
-    border-radius: 0px;
+    height: 25.4vh;
     color: white;
+    font-weight: 300;
+    font-size: 24px;
+    display: flex;
   }
 
 
@@ -279,10 +277,10 @@ input[type=text], select, textarea {
     margin: 0;
     padding: 0;
     margin-left: 8%;
-    padding-top: 2em;
-    font-size: 30%;
-    width: 79em;
-    font-weight: 300;
+    padding-top: .7em;
+    font-size: 70px;
+    width: 10em;
+    font-weight: 700;
 }
 
 .foot-left
@@ -290,7 +288,8 @@ input[type=text], select, textarea {
     float: left;
     display: flex;
     margin: 0;
-    margin-left: 5em;
+    margin-left: 15em;
+
 }
 
 .f-logo
@@ -310,7 +309,7 @@ input[type=text], select, textarea {
     color:orange;
     font-weight: 500;
     padding-left: 0.4em;
-    padding-top: 0.5em;
+    padding-top: 0.2em;
 }
 
 .foot-right
@@ -318,7 +317,7 @@ input[type=text], select, textarea {
     float: right;
     margin: 0;
     padding-right: 8em;
-    padding-top: 1em;
+    padding-top: 2em;
     padding-bottom: 3.25em;
 }
 
@@ -346,14 +345,6 @@ input[type=text], select, textarea {
     background-size: cover;
 }
 
-.palsu
-{
-    font-weight: 300;
-    font-size: 24px;
-    display: flex;
-    align-items: center;
-}
-
 .spacer
 {
     width: 35rem;
@@ -379,6 +370,35 @@ input[type=text], select, textarea {
     font-weight: 500;
 }
 
+.container-fluid
+{
+  padding-left: 0;
+}
+.bg-dark
+{
+  -webkit-filter: opacity(50%);
+}
+.navbar-dark .navbar-nav .nav-link 
+{
+    color: white;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.navbar-nav .nav-link:hover 
+{
+  background: #000000 25%;
+  width: 100%;
+  height: 100%;
+}
+.last
+{
+  margin: 0;
+  margin-right: 4em;
+}
+
 .spin {
     -webkit-animation: rotation 2s normal linear;
 }
@@ -400,11 +420,6 @@ input[type=text], select, textarea {
     letter-spacing: .5px;
 }
 
-.btn-submit
-{
-    padding-top: .5em;
-}
-
 .text-1
 {
     padding-top: 1em;
@@ -414,6 +429,17 @@ input[type=text], select, textarea {
 .mobile-container
 {
     display: none;
+}
+
+.nav-link:hover,
+.nav-link.is-active
+{
+    color: orange;
+}
+
+.active
+{
+    color: orange;
 }
 
 @media (max-width: 768px) {
@@ -459,13 +485,7 @@ input[type=text], select, textarea {
     {
         margin-left: 1em;
     }
-    .submit
-    {
-        margin: 0;
-        padding: 0;
-        margin-right: 300%;
-        padding-right: 3000%;
-    }
+
     .about p
     {
     text-align: center;
