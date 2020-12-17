@@ -42,18 +42,16 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="#home"
-              >Home <span class="sr-only">(current)</span></a
-            >
+            <a class="nav-link home" href="#home">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link about" href="#about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#our-work">Our Work</a>
+            <a class="nav-link our-work" href="#our-work">Our Work</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact Us</a>
+            <a class="nav-link last-link" href="#contact">Contact Us</a>
           </li>
         </ul>
       </div>
@@ -120,15 +118,25 @@
             id="name"
             name="name"
             placeholder="Name"
+            action="#"
+            required
+            onsubmit="validateForm()"
           />
 
-          <input type="text" id="email" name="email" placeholder="Email" />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+            required
+          />
 
           <input
             type="text"
             id="phone"
             name="phone"
             placeholder="Phone Number"
+            required
           />
 
           <textarea
@@ -139,7 +147,12 @@
           ></textarea>
 
           <div class="btn-submit">
-            <input type="submit" value="Submit" class="submit" />
+            <input
+              type="submit"
+              value="Submit"
+              class="submit"
+              onclick="myFunction()"
+            />
           </div>
         </form>
       </div>
@@ -202,4 +215,48 @@
     integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
     crossorigin="anonymous"
   ></script>
+  <script>
+    $(document).ready(function () {
+      $(window).scroll(function () {
+        var scroll = $(window).scrollTop();
+        if (scroll > 0 && scroll < 800) {
+          $(".home").css("color", "#f6c214");
+          $(".about").css("color", "white");
+          $(".our-work").css("color", "white");
+          $(".last-link").css("color", "white");
+          scroll = 800;
+        } else if (scroll > 800 && scroll < 1600) {
+          $(".home").css("color", "white");
+          $(".about").css("color", "#f6c214");
+          $(".our-work").css("color", "white");
+          $(".last-link").css("color", "white");
+        } else if (scroll > 1600 && scroll < 2400) {
+          $(".home").css("color", "white");
+          $(".about").css("color", "white");
+          $(".our-work").css("color", "#f6c214");
+          $(".last-link").css("color", "white");
+        } else if (scroll > 2400) {
+          $(".home").css("color", "white");
+          $(".about").css("color", "white");
+          $(".our-work").css("color", "white");
+          $(".last-link").css("color", "#f6c214");
+        }
+      });
+    });
+  </script>
+  <script>
+    function myFunction() {
+      var nama = document.forms["contact-form"]["name"].value;
+      if (nama === "") {
+        alert("Name must be filled out");
+      }
+
+
+      var x = document.getElementById("phone").value;
+      if (phone === "" {
+        alert("Phone Number must be filled out");
+      }
+
+    }
+  </script>
 </html>
