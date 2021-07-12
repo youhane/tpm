@@ -111,29 +111,25 @@ nav ul li:hover{
 
 .our-work h1{
     margin-bottom: 3rem;
-    font-size: 3ch;
-}
-
-.our-work img{
-    width: 30%;
+    font-size: 4ch;
 }
 
 .our-work div{
     display: flex;
-    width: 60%;
 }
 
 .our-work div div{
     display: flex;
     flex-direction: column;
+    padding: 0rem 1rem;
+}
+
+.our-work div img{
+    width: 30%;
 }
 
 .our-work div div img{
-    width: auto;
-}
-
-.other-work div div img:first-of-type{
-    margin: 0;
+    width: 100%;
 }
 
 .contact
@@ -141,6 +137,12 @@ nav ul li:hover{
     background-image: url(img/contactUs2.png);
     background-repeat: no-repeat;
     background-size: cover;
+    text-align: center;
+    padding: 3rem;
+}
+
+.contact h1{
+    font-size: 4ch;
 }
 
 h1
